@@ -1,5 +1,9 @@
 package com.company;
 
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Conta implements IConta {
     private static final int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;
@@ -40,9 +44,12 @@ public abstract class Conta implements IConta {
         return numero;
     }
 
+
     public double getSaldo() {
         return saldo;
     }
+
+
     protected void imprimirInfosComuns() {
         System.out.println(String.format("Titular: %s", this.cliente.getNome()));
         System.out.println(String.format("Agencia: %d", this.agencia));

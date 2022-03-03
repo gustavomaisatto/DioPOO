@@ -9,7 +9,7 @@ public class Main {
         boolean fecharMenu;
 
         Cliente titular = new Cliente();
-        System.out.println("Deseja criar uma conta? 1 = SIM, 2 = NÃO");
+        System.out.println("Deseja criar uma conta Corrente e uma conta Poupança? 1 = SIM, 2 = NÃO");
         int criar = scan.nextInt();
         int depositar;
         String nomeCliente;
@@ -26,13 +26,11 @@ public class Main {
                         deposito = scan.nextDouble();
                         cc.depositar(deposito);
                     }
-                    cc.imprimirExtrato();
-
-                    poupanca.imprimirExtrato();
+                    System.out.println();
 
 
 
-                    System.out.println("Deseja fazer outro cadastro? ");
+                    System.out.println("Deseja fazer outro cadastro? 1 - SIM, 2 - NÃO");
                         criar = scan.nextInt();
                 }
 
